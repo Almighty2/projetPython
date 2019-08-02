@@ -1,0 +1,112 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+ <div class="container">
+     <div class="row">
+         <div class="col-md-3">
+               <img src="../../static/img/pari.jpg" width="40%" height="100%" class="img-thumbnail" title="Cliquer et parier" alt="">
+               <br> 1000% de votre mise
+            </div>
+         <div class="col-md-2">
+            <h1>VS</h1>
+            <h6 class="text-center"><span class="timeago" title="2019-08-02">august 2,2019</span></h6>  
+         </div> 
+         <div class="col-md-3">
+            <img src="../../static/img/real.png" width="40%" height="100%" class="img-thumbnail" title="Cliquer et parier" alt="">
+            <br> 400% de votre mise
+         </div>
+        <div class="col-md-4">
+            <form method="post" class="col-md-6 col-md-offset-3 card">
+                {% csrf_token %}
+                {% for field in form %}
+                   <div class="form-group">
+                      <label for="{{ field.id_for_label }}"  class="control-label">{{ field.html_name }}</label>
+                      {{field}}
+                   </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+             </form> 
+        </div>
+     </div>
+   <hr>
+   <div class="row">
+         <div class="col-md-3">
+               <img src="../../static/img/barca.png" width="40%" height="100%" class="img-thumbnail" title="Cliquer et parier" alt="">
+               <br> 500% de votre mise
+            </div>
+         <div class="col-md-2">
+            <h1>VS</h1> 
+            <h6 class="text-center"><span class="timeago" title="2019-08-02">august 2,2019</span></h6> 
+         </div> 
+         <div class="col-md-3">
+            <img src="../../static/img/real.png" width="40%" height="100%" class="img-thumbnail" title="Cliquer et parier" alt="">
+            <br> 650% de votre mise
+         </div>
+        <div class="col-md-4">
+            <form method="post" class="col-md-6 col-md-offset-3 card">
+                {% csrf_token %}
+                {% for field in form %}
+                   <div class="form-group">
+                      <label for="{{ field.id_for_label }}"  class="control-label">{{ field.html_name }}</label>
+                      {{field}}
+                   </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+             </form> 
+        </div>
+     </div>
+     <hr>
+     <div class="row">
+      <div class="col-md-3">
+            <img src="../../static/img/foot1.png" width="40%" height="100%" class="img-thumbnail" title="Cliquer et parier" alt="">
+            <br> 300% de votre mise
+         </div>
+      <div class="col-md-2">
+         <h1>VS</h1> 
+         <h6 class="text-center"><span class="timeago" title="2019-08-02">august 2,2019</span></h6> 
+      </div> 
+      <div class="col-md-3">
+         <img src="../../static/img/foot2.png" width="40%" height="100%" class="img-thumbnail" title="Cliquer et parier" alt="">
+         <br> 700% de votre mise
+      </div>
+     <div class="col-md-4">
+         <form method="post" class="col-md-6 col-md-offset-3 card">
+             {% csrf_token %}
+             {% for field in form %}
+                <div class="form-group">
+                   <label for="{{ field.id_for_label }}"  class="control-label">{{ field.html_name }}</label>
+                   {{field}}
+                </div>
+             {% endfor %}
+             <button type="submit" class="btn btn-primary">Envoyer</button>
+          </form> 
+     </div>
+  </div>
+     <hr>
+     <div class="row">
+      <div class="col-md-3">
+            <img src="../../static/img/foot5.jpg" width="60%" height="100%" class="img-thumbnail" title="Cliquer et parier" alt="">
+            <br> 400% de votre mise
+         </div>
+      <div class="col-md-2">
+         <h1>VS</h1> 
+         <h6 class="text-center"><span class="timeago" title="2019-08-03">august 02,2019</span></h6> 
+      </div> 
+      <div class="col-md-3">
+         <img src="../../static/img/foot3.jpg" width="40%" height="100%" class="img-thumbnail" title="Cliquer et parier" alt="">
+         <br> 300% de votre mise
+      </div>
+     <div class="col-md-4">
+         <form method="post" class="col-md-6 col-md-offset-3 card">
+             {% csrf_token %}
+             {% for field in form %}
+                <div class="form-group">
+                   <label for="{{ field.id_for_label }}"  class="control-label">{{ field.html_name }}</label>
+                   {{field}}
+                </div>
+             {% endfor %}
+             <button type="submit" class="btn btn-primary">Envoyer</button>
+          </form> 
+     </div>
+  </div>
+ </div>
+{% endblock %} 

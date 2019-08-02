@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="programmeur" content="Le programmeur, Django, et python">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Pari sportif </title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  
+  <body class="mb-4">
+
+      {% include "layouts/_nav.html" %}
+      {% block content %}{% endblock %} 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <script>
+          $(document).ready(function() {
+            $("#reinitialisation").hide()
+          $('#mdp').click(function(){
+              $('#connexion').hide();
+              $('#reinitialisation').fadeIn();
+              
+          });
+          $('#cnx').click(function(){
+              $('#connexion').fadeIn();
+              $('#reinitialisation').hide();
+          });
+          });
+      </script>
+	   <script>
+        var myText="  ièrement libéré.";
+      
+      var myArray=myText.split("");
+      var timeLooper;
+      
+      function loop(){
+        if(myArray.length >0){
+          document.getElementById("secretary_text").innerHTML +=myArray.shift();
+          
+        }else{
+          clearTimeout(timeLooper);
+        }
+        timeLooper=setTimeout('loop()',70);
+      }
+      loop();
+       </script>
+    </body>      
+</html>

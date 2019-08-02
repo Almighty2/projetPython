@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<h1 class="text-center">List Utilisateurs</h1>
+
+<table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Pseudo</th>
+            <th scope="col">email</th>
+            <th scope="col">Heure</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+                <tr>
+                   <td>{{ post.id }}</td>
+                   <td>{{ post.nom }}</td> 
+                   <td>{{ post.pseudo }}</td> 
+                   <td>{{ post.email }}</td> 
+                   <td>{{ post.created_at }}</td>    
+                </tr>
+            {% endfor %} 
+        </tbody>
+      </table>
+{% endblock %}      

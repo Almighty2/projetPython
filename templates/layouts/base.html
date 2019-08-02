@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="programmeur" content="Le programmeur, Django, et python">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Pari sportif </title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+  
+  <body class="mb-4">
+
+      {% include "layouts/_nav.html" %}
+      {% block content %}{% endblock %} 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+      <script src="../../static/bootstrap/jquery.timeago.js"></script>
+      <script src="../../static/bootstrap/jquery.timeago.fr.js"></script>
+      <script src="../../static/bootstrap/jquery.livequery.min.js"></script>
+      <script>
+          $(document).ready(function() {
+            $("span.timeago").timeago();
+            $("#reinitialisation").hide()
+          $('#mdp').click(function(){
+              $('#connexion').hide();
+              $('#reinitialisation').fadeIn();
+              
+          });
+          $('#cnx').click(function(){
+              $('#connexion').fadeIn();
+              $('#reinitialisation').hide();
+          });
+          });
+      </script>
+	   <script>
+        var myText="Le meilleur conseil est donc le suivant : le jeu doit rester une source de plaisir avant tout. Certes, suivre un match sur lequel on a parié peut procurer des sentiments intenses, mais il ne faut pas en oublier pour autant la réalité de la vie, ni se renfermer sur soi-même. Enfin et c'est sans doute le plus important : n'engagez jamais une somme d'argent qui mettrait en péril votre budget mensuel vital. C'est la règle numéro un à respecter. On ne s'offre pas des vacances à Tahiti en ne gardant en réserve qu'une poignée d'euros pour vivre. ";
+      
+      var myArray=myText.split("");
+      var timeLooper;
+      
+      function loop(){
+        if(myArray.length >0){
+          document.getElementById("secretary_text").innerHTML +=myArray.shift();
+          
+        }else{
+          clearTimeout(timeLooper);
+        }
+        timeLooper=setTimeout('loop()',70);
+      }
+      loop();
+       </script>
+    </body>      
+</html>

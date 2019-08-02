@@ -1,0 +1,83 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+    <div class="container">
+            <h1 class="text-center">Volleyball</h1>
+         <div class="row">
+             <div class="col-md-3">
+                <img src="../../static/img/vole2.png" width="40%" height="100%" class="img-thumbnail" title="Cliquer et parier" alt="">
+                <br> 400% de votre mise
+               </div>
+             <div class="col-md-2">
+                <h1>VS</h1> 
+             </div> 
+             <div class="col-md-3">
+                <img src="../../static/img/vol3.jpg" width="40%" height="100%" class="img-thumbnail" title="Cliquer et parier" alt="">
+                <br> 800% de votre mise
+               </div>
+             <div class="col-md-4">
+                    <form method="post" class="col-md-6 col-md-offset-3 card">
+                        {% csrf_token %}
+                        {% for field in form %}
+                           <div class="form-group">
+                              <label for="{{ field.id_for_label }}"  class="control-label">{{ field.html_name }}</label>
+                              {{field}}
+                           </div>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                     </form> 
+                </div>
+         </div>
+         <hr>
+         <div class="row">
+                <div class="col-md-3">
+                       <img src="../../static/img/b5.png" width="40%" height="100%" class="img-thumbnail" title="Cliquer et parier" alt="">
+                       <br> 600% de votre mise
+                     </div>
+                <div class="col-md-2">
+                   <h1>VS</h1> 
+                </div> 
+                <div class="col-md-3">
+                       <img src="../../static/img/b6.jpg" width="40%" height="100%" class="img-thumbnail" title="Cliquer et parier" alt="">
+                       <br> 500% de votre mise
+                     </div>
+                <div class="col-md-4">
+                       <form method="post" class="col-md-6 col-md-offset-3 card">
+                           {% csrf_token %}
+                           {% for field in form %}
+                              <div class="form-group">
+                                 <label for="{{ field.id_for_label }}"  class="control-label">{{ field.html_name }}</label>
+                                 {{field}}
+                              </div>
+                           {% endfor %}
+                           <button type="submit" class="btn btn-primary">Envoyer</button>
+                       </form> 
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                    <div class="col-md-3">
+                           <img src="../../static/img/b1.png" width="40%" height="100%" class="img-thumbnail" title="Cliquer et parier" alt="">
+                           <br> 900% de votre mise
+                        </div>
+                    <div class="col-md-2">
+                       <h1>VS</h1> 
+                    </div> 
+                    <div class="col-md-3">
+                           <img src="../../static/img/b2.jpg" width="40%" height="100%" class="img-thumbnail" title="Cliquer et parier" alt="">
+                           <br> 500% de votre mise
+                        </div>
+                    <div class="col-md-4">
+                           <form method="post" class="col-md-6 col-md-offset-3 card">
+                               {% csrf_token %}
+                               {% for field in form %}
+                                  <div class="form-group">
+                                     <label for="{{ field.id_for_label }}"  class="control-label">{{ field.html_name }}</label>
+                                     {{field}}
+                                  </div>
+                               {% endfor %}
+                               <button type="submit" class="btn btn-primary">Envoyer</button>
+                           </form> 
+                    </div>
+                </div> 
+    </div>
+{% endblock %}      
